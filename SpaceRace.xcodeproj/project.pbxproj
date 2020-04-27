@@ -15,6 +15,14 @@
 		353BD3752456FDFC0077EF2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 353BD3732456FDFC0077EF2A /* Main.storyboard */; };
 		353BD3772456FDFC0077EF2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 353BD3762456FDFC0077EF2A /* Assets.xcassets */; };
 		353BD37A2456FDFC0077EF2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 353BD3782456FDFC0077EF2A /* LaunchScreen.storyboard */; };
+		353BD38A2456FE680077EF2A /* explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 353BD3822456FE680077EF2A /* explosion.sks */; };
+		353BD38B2456FE680077EF2A /* tv@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 353BD3832456FE680077EF2A /* tv@2x.png */; };
+		353BD38C2456FE680077EF2A /* bigSpark.png in Resources */ = {isa = PBXBuildFile; fileRef = 353BD3842456FE680077EF2A /* bigSpark.png */; };
+		353BD38D2456FE680077EF2A /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 353BD3852456FE680077EF2A /* spark.png */; };
+		353BD38E2456FE680077EF2A /* player@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 353BD3862456FE680077EF2A /* player@2x.png */; };
+		353BD38F2456FE680077EF2A /* ball@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 353BD3872456FE680077EF2A /* ball@2x.png */; };
+		353BD3902456FE680077EF2A /* starfield.sks in Resources */ = {isa = PBXBuildFile; fileRef = 353BD3882456FE680077EF2A /* starfield.sks */; };
+		353BD3912456FE680077EF2A /* hammer@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 353BD3892456FE680077EF2A /* hammer@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +36,14 @@
 		353BD3762456FDFC0077EF2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		353BD3792456FDFC0077EF2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		353BD37B2456FDFC0077EF2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		353BD3822456FE680077EF2A /* explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = explosion.sks; sourceTree = "<group>"; };
+		353BD3832456FE680077EF2A /* tv@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tv@2x.png"; sourceTree = "<group>"; };
+		353BD3842456FE680077EF2A /* bigSpark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bigSpark.png; sourceTree = "<group>"; };
+		353BD3852456FE680077EF2A /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		353BD3862456FE680077EF2A /* player@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "player@2x.png"; sourceTree = "<group>"; };
+		353BD3872456FE680077EF2A /* ball@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ball@2x.png"; sourceTree = "<group>"; };
+		353BD3882456FE680077EF2A /* starfield.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = starfield.sks; sourceTree = "<group>"; };
+		353BD3892456FE680077EF2A /* hammer@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hammer@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +76,7 @@
 		353BD3682456FDFC0077EF2A /* SpaceRace */ = {
 			isa = PBXGroup;
 			children = (
+				353BD3812456FE680077EF2A /* Content */,
 				353BD3692456FDFC0077EF2A /* AppDelegate.swift */,
 				353BD36B2456FDFC0077EF2A /* GameScene.sks */,
 				353BD36D2456FDFC0077EF2A /* Actions.sks */,
@@ -71,6 +88,21 @@
 				353BD37B2456FDFC0077EF2A /* Info.plist */,
 			);
 			path = SpaceRace;
+			sourceTree = "<group>";
+		};
+		353BD3812456FE680077EF2A /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				353BD3822456FE680077EF2A /* explosion.sks */,
+				353BD3832456FE680077EF2A /* tv@2x.png */,
+				353BD3842456FE680077EF2A /* bigSpark.png */,
+				353BD3852456FE680077EF2A /* spark.png */,
+				353BD3862456FE680077EF2A /* player@2x.png */,
+				353BD3872456FE680077EF2A /* ball@2x.png */,
+				353BD3882456FE680077EF2A /* starfield.sks */,
+				353BD3892456FE680077EF2A /* hammer@2x.png */,
+			);
+			path = Content;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,9 +164,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				353BD3752456FDFC0077EF2A /* Main.storyboard in Resources */,
+				353BD38F2456FE680077EF2A /* ball@2x.png in Resources */,
+				353BD38D2456FE680077EF2A /* spark.png in Resources */,
+				353BD38B2456FE680077EF2A /* tv@2x.png in Resources */,
+				353BD38E2456FE680077EF2A /* player@2x.png in Resources */,
+				353BD38C2456FE680077EF2A /* bigSpark.png in Resources */,
 				353BD36C2456FDFC0077EF2A /* GameScene.sks in Resources */,
+				353BD3912456FE680077EF2A /* hammer@2x.png in Resources */,
 				353BD3772456FDFC0077EF2A /* Assets.xcassets in Resources */,
+				353BD38A2456FE680077EF2A /* explosion.sks in Resources */,
 				353BD37A2456FDFC0077EF2A /* LaunchScreen.storyboard in Resources */,
+				353BD3902456FE680077EF2A /* starfield.sks in Resources */,
 				353BD36E2456FDFC0077EF2A /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,7 +342,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.stanford.SpaceRace;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -320,7 +360,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.stanford.SpaceRace;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
