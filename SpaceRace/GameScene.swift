@@ -23,6 +23,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let possibleEnemies = ["ball", "hammer", "tv"]
     var isGameOver = false
     var gameTimer: Timer?
+    var enemiesCount = 0
+    var creationInterval = 1.0
     
     override func didMove(to view: SKView) {
         backgroundColor = .black
@@ -49,7 +51,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         physicsWorld.gravity = CGVector(dx: 0, dy: 0)
         physicsWorld.contactDelegate = self
         
-        gameTimer = Timer.scheduledTimer(timeInterval: 0.35, target: self, selector: #selector(createEnemy), userInfo: nil, repeats: true)
+        gameTimer = Timer.scheduledTimer(timeInterval: creationInterval, target: self, selector: #selector(createEnemy), userInfo: nil, repeats: true)
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -77,6 +79,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         player.position = location
     }
     
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if children.contains(player) {
+            didBegin(SKPhysicsContact())
+        }
+    }
+    
     @objc func createEnemy() {
         guard let enemy = possibleEnemies.randomElement() else { return }
         
@@ -90,6 +98,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         sprite.physicsBody?.angularVelocity = 5
         sprite.physicsBody?.angularDamping = 0
         sprite.physicsBody?.linearDamping = 0
+        
+        enemiesCount += 1
+        
+        if enemiesCount % 20 == 0 {
+            creationInterval -= 0.1
+            if creationInterval <= 0.1 { return }
+            gameTimer?.invalidate()
+            gameTimer = Timer.scheduledTimer(timeInterval: creationInterval, target: self, selector: #selector(createEnemy), userInfo: nil, repeats: true)
+        }
     }
     
     func didBegin(_ contact: SKPhysicsContact) {
@@ -100,6 +117,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         player.removeFromParent()
         
         isGameOver = true
+        
+        gameTimer?.invalidate()
     }
     
 }
